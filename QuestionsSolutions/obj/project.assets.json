@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/orkhanrahimli/RiderProjects/LinkedListsHackerRank/LinkedListsHackerRank/LinkedListsHackerRank.csproj",
-      "projectName": "LinkedListsHackerRank",
-      "projectPath": "/Users/orkhanrahimli/RiderProjects/LinkedListsHackerRank/LinkedListsHackerRank/LinkedListsHackerRank.csproj",
+      "projectUniqueName": "/Users/orkhanrahimli/RiderProjects/LinkedListsHackerRank/QuestionsSolutions/QuestionsSolutions.csproj",
+      "projectName": "QuestionsSolutions",
+      "projectPath": "/Users/orkhanrahimli/RiderProjects/LinkedListsHackerRank/QuestionsSolutions/QuestionsSolutions.csproj",
       "packagesPath": "/Users/orkhanrahimli/.nuget/packages/",
-      "outputPath": "/Users/orkhanrahimli/RiderProjects/LinkedListsHackerRank/LinkedListsHackerRank/obj/",
+      "outputPath": "/Users/orkhanrahimli/RiderProjects/LinkedListsHackerRank/QuestionsSolutions/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/orkhanrahimli/.nuget/NuGet/NuGet.Config"

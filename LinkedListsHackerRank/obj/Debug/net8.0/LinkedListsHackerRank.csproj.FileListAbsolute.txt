@@ -1,0 +1,15 @@
+/Users/orkhanrahimli/RiderProjects/LinkedListsHackerRank/LinkedListsHackerRank/bin/Debug/net8.0/LinkedListsHackerRank
+/Users/orkhanrahimli/RiderProjects/LinkedListsHackerRank/LinkedListsHackerRank/bin/Debug/net8.0/LinkedListsHackerRank.deps.json
+/Users/orkhanrahimli/RiderProjects/LinkedListsHackerRank/LinkedListsHackerRank/bin/Debug/net8.0/LinkedListsHackerRank.runtimeconfig.json
+/Users/orkhanrahimli/RiderProjects/LinkedListsHackerRank/LinkedListsHackerRank/bin/Debug/net8.0/LinkedListsHackerRank.dll
+/Users/orkhanrahimli/RiderProjects/LinkedListsHackerRank/LinkedListsHackerRank/bin/Debug/net8.0/LinkedListsHackerRank.pdb
+/Users/orkhanrahimli/RiderProjects/LinkedListsHackerRank/LinkedListsHackerRank/obj/Debug/net8.0/LinkedListsHackerRank.GeneratedMSBuildEditorConfig.editorconfig
+/Users/orkhanrahimli/RiderProjects/LinkedListsHackerRank/LinkedListsHackerRank/obj/Debug/net8.0/LinkedListsHackerRank.AssemblyInfoInputs.cache
+/Users/orkhanrahimli/RiderProjects/LinkedListsHackerRank/LinkedListsHackerRank/obj/Debug/net8.0/LinkedListsHackerRank.AssemblyInfo.cs
+/Users/orkhanrahimli/RiderProjects/LinkedListsHackerRank/LinkedListsHackerRank/obj/Debug/net8.0/LinkedListsHackerRank.csproj.CoreCompileInputs.cache
+/Users/orkhanrahimli/RiderProjects/LinkedListsHackerRank/LinkedListsHackerRank/obj/Debug/net8.0/LinkedListsHackerRank.sourcelink.json
+/Users/orkhanrahimli/RiderProjects/LinkedListsHackerRank/LinkedListsHackerRank/obj/Debug/net8.0/LinkedListsHackerRank.dll
+/Users/orkhanrahimli/RiderProjects/LinkedListsHackerRank/LinkedListsHackerRank/obj/Debug/net8.0/refint/LinkedListsHackerRank.dll
+/Users/orkhanrahimli/RiderProjects/LinkedListsHackerRank/LinkedListsHackerRank/obj/Debug/net8.0/LinkedListsHackerRank.pdb
+/Users/orkhanrahimli/RiderProjects/LinkedListsHackerRank/LinkedListsHackerRank/obj/Debug/net8.0/LinkedListsHackerRank.genruntimeconfig.cache
+/Users/orkhanrahimli/RiderProjects/LinkedListsHackerRank/LinkedListsHackerRank/obj/Debug/net8.0/ref/LinkedListsHackerRank.dll

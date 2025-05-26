@@ -6,6 +6,10 @@ class Program
 {
     static void Main(string[] args)
     {
+        //The question solutions are in the other project in the solution. In this one, We have generated an example LinkedList source code...
+        //... and a proper custom IEnumerator<> class to it, made the foreach statement usage available for our example linked list class...
+        //.. by implementing IEnumerable<> in the source code, and gave some terms&definitions.
+        
         //Terminology
         //Head: The first node in a linked list.
         //Tail: The last node in a linked list.
@@ -13,28 +17,49 @@ class Program
         //Node: An object containing data and pointer(s)
         //Constant Time = O(1), Linear Time = O(n)
         
+        ExpLinkedList<int> list1 = new ExpLinkedList<int>();
+        list1.AddNode(10);
+        list1.AddNode(15);
+        list1.AddNode(14);
+        list1.AddNode(17);
+        
+        foreach(var node in list1)
+            Console.WriteLine(node.Value);
+        
+        ExpLinkedList<string> list2 = new ExpLinkedList<string>();
+        list2.AddNode("efe");
+        list2.AddNode("ozgur");
+        list2.AddNode("kilic");
+        list2.AddNode("Orkhan");
+        list2.AddNode("Rahimli");
+        
+        foreach(var node in list2)
+            Console.WriteLine(node.Value);
     }
 }
 
-class ExpNode
+class ExpNode<T>
 {
-    int data;
-    ExpNode next;
-    public ExpNode Next {
+    T data;
+    public T Value { get => data; }
+    ExpNode<T> next;
+    public ExpNode<T> Next {
         get{return next;}
         set { next = value; }
     }
 
-    public ExpNode(int x)
+    public ExpNode(T data)
     {
-        this.data = data;
-        ExpNode next = null;
+        this.data = data; 
+        next = null;
     }
 }
 
-class ExpLinkedList : IEnumerable<ExpNode>
+class ExpLinkedList<T> : IEnumerable<ExpNode<T>>
 {
-    ExpNode head;
+    private T firstValue;
+    ExpNode<T> head;
+    public ExpNode<T> First {get {return head;}}
     private int counter = 0;
 
     public ExpLinkedList()
@@ -42,44 +67,65 @@ class ExpLinkedList : IEnumerable<ExpNode>
         head = null;
     }
 
-    public void AddNode(int data)
+    public void AddNode(T data)
     {
-        ExpNode node = new ExpNode(data);
+        ExpNode<T> node = new ExpNode<T>(data);
         node.Next = head;
         head = node;
         counter++;
     }
 
-    public IEnumerator<ExpNode> GetEnumerator()
+    public int Count()
     {
-        return new LinkedList<ExpNode>().GetEnumerator();
+        return counter;
+    }
+
+    public IEnumerator<ExpNode<T>> GetEnumerator()
+    {
+        return new ExpLinkedListEnumerator<T>(this);
     }
 
     IEnumerator IEnumerable.GetEnumerator()
     {
-        
+        return new ExpLinkedListEnumerator<T>(this);
     }
 
 }
 
-class ExpLinkedListEnumerator : IEnumerator<ExpNode>
+class ExpLinkedListEnumerator<T> : IEnumerator<ExpNode<T>>
 {
-    public ExpNode Current { get; }
-
-    object? IEnumerator.Current { get; }
-    
-    public bool MoveNext()
+    private ExpLinkedList<T> _source;
+    ExpNode<T> _current;
+    public ExpLinkedListEnumerator(ExpLinkedList<T> source)
     {
-        throw new NotImplementedException();
+        _source = source;
+        _source.AddNode(default);
+        _current = _source.First;
+    }
+    
+    public ExpNode<T> Current
+    {
+        get { return _current; }
+    }
+
+    object? IEnumerator.Current
+    {
+        get { return _current; }
+    }
+
+    public bool MoveNext()
+    { 
+        _current = _current.Next;
+        return _current != null;
     }
 
     public void Reset()
     {
-        throw new NotImplementedException();
+        _current = _source.First;
     }
 
     public void Dispose()
     {
-        throw new NotImplementedException();
+        _source = null;
     }
 }

@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedListsHackerRank", "LinkedListsHackerRank\LinkedListsHackerRank.csproj", "{8151C236-DA51-4E2B-9DC2-14AA9E871C18}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestionsSolutions", "QuestionsSolutions\QuestionsSolutions.csproj", "{926C9D60-C9AC-4040-9839-FBC408D8435F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{8151C236-DA51-4E2B-9DC2-14AA9E871C18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8151C236-DA51-4E2B-9DC2-14AA9E871C18}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8151C236-DA51-4E2B-9DC2-14AA9E871C18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{926C9D60-C9AC-4040-9839-FBC408D8435F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{926C9D60-C9AC-4040-9839-FBC408D8435F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{926C9D60-C9AC-4040-9839-FBC408D8435F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{926C9D60-C9AC-4040-9839-FBC408D8435F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
