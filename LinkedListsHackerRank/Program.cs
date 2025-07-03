@@ -24,7 +24,7 @@ class Program
         list1.AddNode(17);
         
         foreach(var node in list1)
-            Console.WriteLine(node.Value);
+            Console.WriteLine(node);
         
         ExpLinkedList<string> list2 = new ExpLinkedList<string>();
         list2.AddNode("efe");
@@ -32,9 +32,10 @@ class Program
         list2.AddNode("kilic");
         list2.AddNode("Orkhan");
         list2.AddNode("Rahimli");
+        list2.Reverse();
         
         foreach(var node in list2)
-            Console.WriteLine(node.Value);
+            Console.WriteLine(node);
     }
 }
 
@@ -55,7 +56,7 @@ class ExpNode<T>
     }
 }
 
-class ExpLinkedList<T> : IEnumerable<ExpNode<T>>
+class ExpLinkedList<T> : IEnumerable<T>
 {
     private T firstValue;
     ExpNode<T> head;
@@ -80,19 +81,36 @@ class ExpLinkedList<T> : IEnumerable<ExpNode<T>>
         return counter;
     }
 
-    public IEnumerator<ExpNode<T>> GetEnumerator()
+    public void Reverse()
+    {
+        ExpNode<T> prev = null;
+        ExpNode<T> current = head;
+        ExpNode<T> next = null;
+
+        while (current != null)
+        {
+            next = current.Next;    
+            current.Next = prev;   
+            prev = current;        
+            current = next;
+        }
+
+        head = prev;
+    }
+
+    public IEnumerator<T> GetEnumerator()
     {
         return new ExpLinkedListEnumerator<T>(this);
     }
 
     IEnumerator IEnumerable.GetEnumerator()
     {
-        return new ExpLinkedListEnumerator<T>(this);
+        return GetEnumerator();
     }
 
 }
 
-class ExpLinkedListEnumerator<T> : IEnumerator<ExpNode<T>>
+class ExpLinkedListEnumerator<T> : IEnumerator<T>
 {
     private ExpLinkedList<T> _source;
     ExpNode<T> _current;
@@ -103,14 +121,14 @@ class ExpLinkedListEnumerator<T> : IEnumerator<ExpNode<T>>
         _current = _source.First;
     }
     
-    public ExpNode<T> Current
+    public T Current
     {
-        get { return _current; }
+        get { return _current.Value; }
     }
 
     object? IEnumerator.Current
     {
-        get { return _current; }
+        get { return _current.Value; }
     }
 
     public bool MoveNext()
